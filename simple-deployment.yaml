@@ -1,20 +1,22 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  web
-  labels:
-    name:  web
+  name: myapp
 spec:
+  selector:
+    matchLabels:
+      app: myapp
   template:
     metadata:
       labels:
-        app:  web
+        app: myapp
     spec:
       containers:
-      - image: nginx
-        name:  web
+      - name: myapp
+        image: nginx
         resources:
           limits:
-            cpu: "250m"
-            memory: "500M" 
-      restartPolicy: Always
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
