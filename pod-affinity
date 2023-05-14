@@ -3,7 +3,7 @@
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
               matchExpressions:
-              - key: app
+              - key: <key>
                 operator: In
                 values:
                 - <value>
