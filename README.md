@@ -5,5 +5,5 @@
 https://github.com/alperen-selcuk/minikube-install-cloud
 
 ```
-minikube start --kubernetes-version=1.23.1 --vm-driver=none
+minikube start --kubernetes-version=1.23.1 --vm-driver=none --nodes=3
 ```
